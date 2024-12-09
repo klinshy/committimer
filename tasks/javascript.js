@@ -117,7 +117,7 @@ function logTaskAction(action, taskContent, columnId) {
         'in-progress': 'In Progress',
         'done': 'Done'
     };
-    const message = `Task "${taskContent}" has been ${action} ${columnNames[columnId]}.`;
+    const message = `Aufgabe "${taskContent}" wurde zu ${action} ${columnNames[columnId]} hinzugefügt.`;
    
     console.log(message);
     // Send a message to the parent page
