@@ -113,9 +113,9 @@ function updateLocalStorage() {
 // Function to send a message to the local chat
 function logTaskAction(action, taskContent, columnId) {
     const columnNames = {
-        'todo': 'To-Do',
-        'in-progress': 'In Progress',
-        'done': 'Done'
+        'todo': 'zu erledigen',
+        'in-progress': 'in Arbeit',
+        'done': 'Erledigt'
     };
     const message = `Aufgabe "${taskContent}" wurde zu ${action} ${columnNames[columnId]} hinzugefügt.`;
    
@@ -141,7 +141,7 @@ function addTask(columnId) {
         taskInput.value = "";
 
         // Log task creation
-        logTaskAction('created and added to', taskContent, columnId);
+        logTaskAction('erstellt', taskContent, columnId);
 
         // Award 5 EXP for creating a task
         WA.player.state.saveVariable('pomo-exp', '0', { public: false, persist: false, scope: "room" });
@@ -164,7 +164,7 @@ function updateTaskStatus(taskId, newStatus) {
                     WA.player.state.saveVariable('pomo-exp', '10', { public: false, persist: false, scope: "room" });
                 }
                 // Log task status update
-                logTaskAction('moved to', task.content, newStatus);
+                logTaskAction('verschoben', task.content, newStatus);
             }
             return { ...task, status: newStatus };
         }
