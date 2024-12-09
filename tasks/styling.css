@@ -74,7 +74,7 @@ body {
 }
 
 .add-task-btn {
-    background-color: #4caf50;
+    background-color: #27907A;
     border: none;
     color: white;
     /* Adjust padding to make 
@@ -93,7 +93,7 @@ body {
 
 
 .add-task-btn:hover {
-    background-color: #45a049;
+    background-color: #D3D3C4;
 }
 
 

@@ -9,30 +9,30 @@
       @import 'https://fonts.googleapis.com/css?family=Signika:300,700';
       html { box-sizing: border-box; }
       *, *:before, *:after { box-sizing: inherit; }
-      html, body { background:#181A21; width: 100%; height: 100%; margin: 0; padding: 0;
+      html, body { background:#D3D3C4; width: 100%; height: 100%; margin: 0; padding: 0;
         font-family: 'Signika', sans-serif;
-        font-weight: 300; color:#dddcdd; font-size:16px; line-height:24px; }
+        font-weight: 300; color:#202226; font-size:16px; line-height:24px; }
       #break-gif { background: transparent no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover; width:100%; height:100%; position:fixed; opacity:.25; }
         #break-gif .poweredby { position: fixed; left:5%; bottom:5%; }
-      a { color: #181A21; background:#2A7D57; text-decoration:none; }
+      a { color: #202226; background:#27907A; text-decoration:none; }
       #canvas { position: relative; height: calc(100% - 10%); top: 5%; margin: 0 5%; 
         background: url('images/IconOnly_Transparent_NoBuffer.png') no-repeat center center;
         background-size: contain; }
        img.logo { height: 48px; position: absolute;
        top: 5%;
        left: 5%; }
-       h2 { font-size: 4.3rem; line-height: 72px; margin: 96px 0 0; font-weight: 700; color:#F8333C; }
+       h2 { font-size: 4.3rem; line-height: 72px; margin: 96px 0 0; font-weight: 700; color:#27907A; }
 
-       h3 { font-size: 1.728rem; font-weight: 300; line-height: 48px; margin: 48px 0 0; color:#F8333C; }
-       p { margin:0; letter-spacing: 1px; font-weight: 300; }
+       h3 { font-size: 1.728rem; font-weight: 300; line-height: 48px; margin: 48px 0 0; color:#27907A; }
+       p { margin:0; letter-spacing: 1px; font-weight: 300; color:#D3D3C47A}
 
 
 
-       a.btn, .why a.btn { display:inline-block; background:rgba(255, 255, 255, 0.3); color:#181A21; width:48px; height:48px; text-align:center;
+       a.btn, .why a.btn { display:inline-block; background:#27907A; color:#202226; width:48px; height:48px; text-align:center;
          font-weight:bold; border-radius:50%; line-height:48px; font-size: 1.2rem; font-weight: bold;
        position:absolute; right:5%; top: 5%; text-decoration: none; }
        a.btn:hover, .why a.btn:hover { background:rgba(255, 255, 255, 0.5); }
@@ -41,9 +41,9 @@
       .why { display: none; position: absolute; top:0; right:0; bottom:0; left:0; background:rgba(24,26,33,.95); padding:5% 5% 15%; overflow-y:auto; }
       .why a { color: #dddcdd; text-decoration:underline; background: transparent; }
       .close { position:absolute; right:5%; }
-      .credits {  display:inline-block; position:fixed; right:0%; bottom: 0%; background:#181A21; padding:12px; color:#555; }
-       .credits a {  color:#181A21; text-decoration: none; }
-    </style>
+      .credits {  display:inline-block; position:fixed; right:0%; bottom: 0%; background:#D3D3C4; padding:12px; color:#555; }
+       .credits a {  color:#202226; text-decoration: none; }
+    </style> 
   </head>
 
   <body>
@@ -59,7 +59,7 @@
 
     <div class="why" id="why">
       <a href="index.html" title="Commit Circle">
-      <img src="" alt="Commit Circle" class="logo" />
+      <img src="images/poweredby.png" alt="Commit Circle" class="logo" />
       </a>
       <a class="btn close" href="#" id="close">X</a>
       <h2>Commit Circle Timer</h2>
@@ -88,6 +88,7 @@
 
   <script type="text/javascript" src="javascripts/favicon.js"></script>
   <script type="text/javascript" src="javascripts/teamodoro.js"></script>
+  <script type="text/javascript" src="javascripts/prompts.js"></script>
   <script type="text/javascript" src="javascripts/svg.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="javascripts/svg.clock.js" charset="utf-8"></script>
 
@@ -111,7 +112,7 @@
   }
 
   .modal-content {
-    background-color: #181A21;
+    background-color: #D3D3C4;
     margin: 5% auto;
     padding: 5px;
     width: 80%;
@@ -119,8 +120,8 @@
   }
 
   .close-modal {
-    color: #aaa;
-    float: right;
+    color: #F8333C;
+    float: left;
     font-size: 28px;
     font-weight: bold;
   }
@@ -136,8 +137,8 @@
     position: fixed;
     bottom: 5%;
     left: 5%;
-    background: rgba(255, 255, 255, 0.3);
-    color: #181A21;
+    background: #27907A;
+    color: #202226;
     width: 48px;
     height: 48px;
     text-align: center;
@@ -149,7 +150,7 @@
   }
 
   .open-modal-btn:hover {
-    background: #2A7D57;
+    background: #D3D3C4;
   }
 </style>
 
@@ -157,9 +158,9 @@
   <div class="modal-content">
     <span class="close-modal">&times;</span>
 
-<iframe src="tasks/tasks-index.html" id="CreationBoard" style="width:100%; height:80vh;"></iframe>
+<iframe src="tasks/tasks-index.html" id="Focus Board" style="width:100%; height:80vh;"></iframe>
 <script>
-document.getElementById('CreationBoard').onload = () => {
+document.getElementById('Focus Board').onload = () => {
     console.log('Iframe loaded');
 };
 </script>
