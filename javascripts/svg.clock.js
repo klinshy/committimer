@@ -48,13 +48,13 @@ SVG.Clock = function(size, options) {
   /* draw minute pointer */
   this.minutes = this.circle(4).move(49, 0).fill("#fff").stroke("#181A21");
 
-  this.focusLabel = this.text('FOCUS').move(50, 25).fill(red).
+  this.focusLabel = this.text('FOKUS').move(50, 25).fill(red).
     font({anchor: 'middle', size: 6, family: font, weight: '300', length: '50px'});
 
   this.focusTime = this.text("").move(50, 35).fill(red).
     font({anchor: 'middle', size: 24, family: font, weight: '700'});
 
-  this.breakLabel = this.text('BREAK').move(50, 25).fill(green)
+  this.breakLabel = this.text('PAUSE').move(50, 25).fill(green)
     .font({anchor: 'middle', size: 6, family: font, weight: '300'});
 
   this.breakTime = this.text("").move(50, 35).fill(green)
