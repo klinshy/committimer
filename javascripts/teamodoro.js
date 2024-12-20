@@ -138,7 +138,7 @@ Teamodoro = {
     if (this.inBreak() && this.lastState == "focus") {
       document.getElementById("beep").play();
       const breakPrompt = breakSession.prompts[Math.floor(Math.random() * breakSession.prompts.length)];
-      WA.chat.sendChatMessage(breakPrompt, { scope: 'local', author: 'C3-o-mat' });
+      WA.chat.sendChatMessage(breakPrompt, { scope: 'local', author: 'Fokus' });
       WA.state.saveVariable('focus', "");
       WA.player.state.saveVariable('pomo-exp', '0', {
         public: false,
@@ -154,7 +154,7 @@ Teamodoro = {
     } else if (!this.inBreak() && this.lastState == "break") {
       document.getElementById("beep").play();
       const focusPrompt = focusSession.prompts[Math.floor(Math.random() * focusSession.prompts.length)];
-      WA.chat.sendChatMessage(focusPrompt, { scope: 'local', author: 'C3-o-mat' });
+      WA.chat.sendChatMessage(focusPrompt, { scope: 'local', author: 'Fokus' });
       WA.state.saveVariable('focus', "1");
     }
   },
@@ -182,4 +182,11 @@ if (event.data && event.data.type === 'addTask') {
 } else {
     console.log('Other message received:', event.data);
 }
+});
+window.addEventListener('load', function() {
+  if (Teamodoro.lastState === "break") {
+    WA.state.saveVariable('focus', "");
+  } else if (Teamodoro.lastState === "focus") {
+    WA.state.saveVariable('focus', "1");
+  }
 });
